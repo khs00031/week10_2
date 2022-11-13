@@ -1,11 +1,11 @@
-import mysql from 'mysql2';
+import mysql from "mysql2";
 
 const pool = mysql.createPool({
-    host: 'localhost',
+    host: "localhost",
     port: 3306,
-    user: 'root',
-    password: 'dptnzbdpf',
-    database: 'week10',
+    user: "root",
+    password: "dptnzbdpf",
+    database: "week10",
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
@@ -30,7 +30,7 @@ export const selectSql = {
 
 export const deleteSql = {
     deleteDepartment: async (data) => {
-        console.log("deleteSql.deleteDepartment:",data.Dnumber);
+        console.log("deleteSql.deleteDepartment:", data.Dnumber);
         const sql = `delete from department where Dnumber=${data.Dnumber}`
 
         await promisePool.query(sql);

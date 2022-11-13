@@ -28,6 +28,7 @@ export const selectSql = {
     }
 }
 
+//department delete를 위한 SQL문
 export const deleteSql = {
     deleteDepartment: async (data) => {
         console.log("deleteSql.deleteDepartment:", data.Dnumber);
